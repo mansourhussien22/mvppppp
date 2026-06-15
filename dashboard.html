@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MR3 System Home</title>
+    <link rel="icon" href="assets/images/logo.png" />
+    <script>
+      document.documentElement.dataset.theme = localStorage.getItem("mr3-theme") === "dark" ? "dark" : "light";
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css?v=20260615-audit3" />
+    <link rel="stylesheet" href="assets/css/animations.css?v=20260602-ux10" />
+    <link rel="stylesheet" href="assets/css/responsive.css?v=20260615-audit3" />
+  </head>
+  <body class="app-body">
+    <div id="toastHost" class="toast-host" aria-live="polite"></div>
+    <div id="modalHost" class="modal-host" aria-live="polite"></div>
+    <div id="printHost" class="print-host"></div>
+
+    <div class="app-shell">
+      <aside id="sidebar" class="sidebar">
+        <div class="sidebar-brand">
+          <img src="assets/images/logo.png" alt="MR3 System logo" class="brand-logo" />
+          <div>
+            <strong>MR3 System</strong>
+            <span id="businessNameMini">Pharmacy</span>
+          </div>
+        </div>
+        <nav id="sideNav" class="side-nav" aria-label="Primary navigation"></nav>
+        <button id="logoutButtonSide" class="logout-button" type="button"></button>
+      </aside>
+
+      <div id="mobileScrim" class="mobile-scrim"></div>
+      <main class="main-panel">
+        <header class="topbar">
+          <div class="topbar-left">
+            <button id="menuToggle" class="icon-button menu-toggle" type="button" aria-label="Open menu"></button>
+            <div>
+              <p id="currentSection" class="eyebrow">MR3 System</p>
+              <h1 id="pageTitle">MR3 System</h1>
+            </div>
+          </div>
+          <div class="topbar-actions">
+            <button id="profileButtonTop" class="top-profile-button" type="button" aria-label="Profile"></button>
+            <button class="theme-toggle" type="button" data-theme-toggle></button>
+            <select id="languageSwitcher" class="compact-select" aria-label="Language">
+              <option value="en">English</option>
+              <option value="ar">العربية</option>
+            </select>
+            <button id="logoutButtonTop" class="ghost-button" type="button"></button>
+          </div>
+        </header>
+        <section id="appContent" class="content-area"></section>
+      </main>
+    </div>
+
+    <script src="assets/js/utils.js?v=20260602-ux10"></script>
+    <script src="assets/js/db.js?v=20260602-ux10"></script>
+    <script src="assets/js/language.js?v=20260615-movements-audit4"></script>
+    <script src="assets/js/theme.js?v=20260602-ux10"></script>
+    <script src="assets/js/permissions.js?v=20260602-ux10"></script>
+    <script src="assets/js/auth.js?v=20260602-ux10"></script>
+    <script src="assets/js/print.js?v=20260602-ux10"></script>
+    <script src="assets/js/app.js?v=20260602-ux10"></script>
+    <script src="assets/js/production.js?v=20260615-payments-audit2"></script>
+    <script src="assets/js/dashboard.js?v=20260602-ux10"></script>
+    <script src="assets/js/categories.js?v=20260602-ux10"></script>
+    <script src="assets/js/products.js?v=20260602-ux10"></script>
+    <script src="assets/js/inventory.js?v=20260602-ux10"></script>
+    <script src="assets/js/audit.js?v=20260615-movements-audit4"></script>
+    <script src="assets/js/movements.js?v=20260615-movements-audit4"></script>
+    <script src="assets/js/shortages.js?v=20260602-ux10"></script>
+    <script src="assets/js/sales.js?v=20260602-ux10"></script>
+    <script src="assets/js/purchases.js?v=20260602-ux10"></script>
+    <script src="assets/js/returns.js?v=20260602-ux10"></script>
+    <script src="assets/js/customers.js?v=20260615-payments-audit2"></script>
+    <script src="assets/js/suppliers.js?v=20260615-payments-audit2"></script>
+    <script src="assets/js/operations.js?v=20260615-payments-audit2"></script>
+    <script src="assets/js/payments.js?v=20260615-payments-audit2"></script>
+    <script src="assets/js/expenses.js?v=20260602-ux10"></script>
+    <script src="assets/js/reports.js?v=20260602-ux10"></script>
+    <script src="assets/js/profile.js?v=20260602-ux10"></script>
+    <script src="assets/js/users.js?v=20260602-ux10"></script>
+    <script src="assets/js/settings.js?v=20260602-ux10"></script>
+    <script>
+      MR3Theme.init();
+      MR3App.init();
+    </script>
+  </body>
+</html>

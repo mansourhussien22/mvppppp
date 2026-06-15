@@ -1,0 +1,7 @@
+outputs
+work
+.agents
+.codex
+.git
+*.zip
+*.log

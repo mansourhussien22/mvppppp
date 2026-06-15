@@ -1,0 +1,67 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/login",
+      "destination": "/login.html"
+    },
+    {
+      "source": "/home",
+      "destination": "/home.html"
+    },
+    {
+      "source": "/dashboard",
+      "destination": "/dashboard.html"
+    },
+    {
+      "source": "/customer-service",
+      "destination": "/pages/customer-service.html"
+    },
+    {
+      "source": "/reservations",
+      "destination": "/pages/reservations.html"
+    },
+    {
+      "source": "/notifications",
+      "destination": "/pages/notifications.html"
+    },
+    {
+      "source": "/treasury",
+      "destination": "/pages/treasury.html"
+    },
+    {
+      "source": "/inventory-audit",
+      "destination": "/pages/inventory-audit.html"
+    }
+  ]
+}

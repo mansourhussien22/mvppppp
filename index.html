@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MR3 System</title>
+    <meta http-equiv="refresh" content="0; url=login.html" />
+  </head>
+  <body>
+    <script>
+      const session =
+        localStorage.getItem("mr3-session-v1") ||
+        sessionStorage.getItem("mr3-session-v1");
+      location.replace(session ? "dashboard.html#home" : "login.html");
+    </script>
+  </body>
+</html>

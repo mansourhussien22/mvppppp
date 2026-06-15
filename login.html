@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login - MR3 System</title>
+    <link rel="icon" href="assets/images/logo.png" />
+    <script>
+      document.documentElement.dataset.theme = localStorage.getItem("mr3-theme") === "dark" ? "dark" : "light";
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css?v=20260602-ux10" />
+    <link rel="stylesheet" href="assets/css/animations.css?v=20260602-ux10" />
+    <link rel="stylesheet" href="assets/css/responsive.css?v=20260602-ux10" />
+  </head>
+  <body class="login-body">
+    <main class="login-shell">
+      <section class="login-visual" aria-hidden="true">
+        <img src="assets/images/login-image.png" alt="" />
+        <div>
+          <p class="login-visual-kicker">MR3 System</p>
+          <h1 data-i18n="auth.visualTitle">Pharmacy operations, inventory, invoices, and accounting.</h1>
+          <div class="login-feature-stack">
+            <span data-i18n="login.feature.sales">Fast cashier invoices</span>
+            <span data-i18n="login.feature.stock">Smart stock alerts</span>
+            <span data-i18n="login.feature.reports">Live reports</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="login-card animate-rise">
+        <button class="theme-toggle login-theme-toggle" type="button" data-theme-toggle></button>
+        <div class="brand-lockup">
+          <img src="assets/images/logo.png" alt="MR3 System logo" class="brand-logo" />
+          <div>
+            <p class="eyebrow" data-i18n="login.kicker">Secure workspace</p>
+            <h2 data-i18n="auth.signInTitle">Sign in to MR3 System</h2>
+          </div>
+        </div>
+
+        <form id="loginForm" class="stacked-form" novalidate>
+          <label class="field">
+            <span data-i18n="auth.identifier">Username or email</span>
+            <input id="identifier" name="identifier" type="text" autocomplete="username" required />
+          </label>
+
+          <label class="field">
+            <span data-i18n="auth.password">Password</span>
+            <div class="password-box">
+              <input id="password" name="password" type="password" autocomplete="current-password" required />
+              <button id="togglePassword" class="icon-button" type="button" aria-label="Show password" title="Show password"></button>
+            </div>
+          </label>
+
+          <div class="form-row between">
+            <label class="checkbox-line">
+              <input id="remember" type="checkbox" checked />
+              <span data-i18n="auth.remember">Remember me</span>
+            </label>
+            <select id="loginLanguage" class="compact-select" aria-label="Language">
+              <option value="en">English</option>
+              <option value="ar">العربية</option>
+            </select>
+          </div>
+
+          <p id="loginError" class="form-error" role="alert"></p>
+
+          <button id="loginButton" class="primary-button full" type="submit">
+            <span class="button-label" data-i18n="auth.signIn">Sign in</span>
+            <span class="button-loader" hidden></span>
+          </button>
+
+          <div class="login-assist">
+            <strong data-i18n="login.secureTitle">Secure pharmacy workspace</strong>
+            <span data-i18n="login.secureHint">Loading states, Arabic RTL, permissions, and invoices are ready for daily work.</span>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="assets/js/utils.js?v=20260602-ux10"></script>
+    <script src="assets/js/db.js?v=20260602-ux10"></script>
+    <script src="assets/js/language.js?v=20260602-ux10"></script>
+    <script src="assets/js/theme.js?v=20260602-ux10"></script>
+    <script src="assets/js/permissions.js?v=20260602-ux10"></script>
+    <script src="assets/js/auth.js?v=20260615-movements-audit4"></script>
+    <script>
+      MR3Theme.init();
+      MR3Login.init();
+    </script>
+  </body>
+</html>
